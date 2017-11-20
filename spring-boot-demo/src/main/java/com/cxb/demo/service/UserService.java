@@ -25,4 +25,8 @@ public class UserService {
         user.setCompany(c);
         return userRepository.save(user);
     }
+
+    public Company getVirtualCompany(){
+        return companyService.getVirtualCompany();
+    }
 }
