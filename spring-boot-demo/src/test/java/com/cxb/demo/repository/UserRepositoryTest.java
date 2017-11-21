@@ -9,9 +9,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import javax.persistence.criteria.*;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -47,4 +49,21 @@ public class UserRepositoryTest {
         Assert.assertEquals("admin", user.getLoginName());
     }
 
+    @Test
+    public void testFindCompanyId() {
+        List<User> byCompany_id = userRepository.findByCompanyName("google");
+        Assert.assertNotEquals(0, byCompany_id.size());
+    }
+
+
+    public List<User> testFindUsersByName(final String name) {
+        List<User> all = userRepository.findAll(new Specification<User>() {
+            @Override
+            public Predicate toPredicate(Root<User> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
+                Path namePath = root.get("name");
+                return cb.like(namePath, name);
+            }
+        });
+        return all;
+    }
 }
