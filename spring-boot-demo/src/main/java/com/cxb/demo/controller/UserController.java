@@ -1,20 +1,15 @@
 package com.cxb.demo.controller;
 
+import com.cxb.demo.demain.Company;
 import com.cxb.demo.demain.User;
 import com.cxb.demo.service.UserService;
-
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-
-import lombok.extern.slf4j.Slf4j;
-
-import com.cxb.demo.demain.Company;
-import com.cxb.demo.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController("/user")
 @Slf4j
