@@ -22,7 +22,7 @@ public class User {
     private Date birthday;
     private Integer sex;
     private Date createTime;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id")
     @Fetch(FetchMode.JOIN)
     private Company company;
