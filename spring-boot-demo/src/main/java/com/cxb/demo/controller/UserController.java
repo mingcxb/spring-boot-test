@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController("/user")
+@RestController
+@RequestMapping(value = "/user")
 @Slf4j
 public class UserController {
 
@@ -26,8 +27,8 @@ public class UserController {
         return allUser;
     }
 
-    @GetMapping("/vc")
+/*    @GetMapping("/vc")
     public Company getVirtualCompany(){
         return  userService.getVirtualCompany();
-    }
+    }*/
 }
