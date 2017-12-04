@@ -2,6 +2,7 @@ package com.cxb.shiro.demo.controller;
 
 import com.cxb.shiro.demo.demain.User;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,7 @@ public class UserController {
 
     @RequestMapping("allUsers")
     public List<User> findUser() {
+        SecurityUtils.getSubject().getSession().setAttribute("test", "fsdfdddddddddddddddddddddddddddddddddddfsdfsdfeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
         return null;
     }
 
