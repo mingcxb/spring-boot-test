@@ -2,6 +2,7 @@ package com.cxb.demo.shiro;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.pac4j.core.profile.CommonProfile;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
