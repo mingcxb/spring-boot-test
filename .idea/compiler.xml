@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo" />
         <module name="shiro-demo" />
+        <module name="swagger-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -15,6 +16,7 @@
       <module name="shiro-demo" target="1.8" />
       <module name="shiro-spring-boot" target="1.6" />
       <module name="spring-boot-demo" target="1.8" />
+      <module name="swagger-test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

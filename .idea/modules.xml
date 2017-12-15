@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/shiro-demo/shiro-demo.iml" filepath="$PROJECT_DIR$/shiro-demo/shiro-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-boot-test.iml" filepath="$PROJECT_DIR$/.idea/spring-boot-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swagger-test/swagger-test.iml" filepath="$PROJECT_DIR$/swagger-test/swagger-test.iml" />
     </modules>
   </component>
 </project>
